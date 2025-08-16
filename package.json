@@ -1,0 +1,46 @@
+{
+    "name": "just-commands",
+    "displayName": "Just QuickRun: One-key recipe runner",
+    "description": "Displays Justfile recipes as commands in the Command Palette",
+    "version": "0.0.1",
+    "icon": "media/icon.svg",
+    "engines": {
+        "vscode": "^1.92.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "workspaceContains:Justfile",
+        "onCommand:justRun"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "justRun",
+                "title": "Just Run Recipe"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "justRun",
+                "key": "alt+j",
+                "mac": "alt+j",
+                "linux": "alt+j",
+                "win": "alt+j",
+                "when": "workbenchState == 'workspace'"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.92.0",
+        "@types/node": "20.14.2",
+        "typescript": "^5.4.5"
+    }
+}
