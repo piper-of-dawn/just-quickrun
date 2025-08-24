@@ -1,9 +1,16 @@
 {
     "name": "just-commands",
     "displayName": "Just QuickRun: One-key recipe runner",
-    "description": "Displays Justfile recipes as commands in the Command Palette",
-    "version": "0.0.1",
-    "icon": "media/icon.svg",
+    "description": "Run Justfile recipes from VS Code with one key. Press Alt+J to pick a recipe (single-key hotkeys) and run it in the integrated terminal. Requires Just installed and available on your PATH.",
+    "version": "0.0.3",
+    "author": "Kumar Shantanu",
+    "license": "MIT",
+    "publisher": "KumarShantanu",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/piper-of-dawn/just-quickrun"
+    },
+    "icon": "media/icon.png",
     "engines": {
         "vscode": "^1.92.0"
     },
@@ -28,8 +35,7 @@
                 "key": "alt+j",
                 "mac": "alt+j",
                 "linux": "alt+j",
-                "win": "alt+j",
-                "when": "workbenchState == 'workspace'"
+                "win": "alt+j"
             }
         ]
     },

@@ -88,7 +88,7 @@ function deactivate() {
     watcher?.dispose();
 }
 async function findJustfile(root) {
-    const candidates = ['Justfile', 'justfile'].map(f => path.join(root, f));
+    const candidates = ['Justfile', 'justfile', '.justfile', '.Justfile'].map(f => path.join(root, f));
     for (const p of candidates) {
         try {
             await fs.access(p);

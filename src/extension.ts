@@ -89,7 +89,7 @@ export function deactivate() {
 }
 
 async function findJustfile(root: string): Promise<string | undefined> {
-    const candidates = ['Justfile', 'justfile'].map(f => path.join(root, f));
+    const candidates = ['Justfile', 'justfile', '.justfile', '.Justfile'].map(f => path.join(root, f));
     for (const p of candidates) {
         try { await fs.access(p); return p; } catch { }
     }
